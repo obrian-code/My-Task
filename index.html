@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="http://bibekshakya.com/demo/vue/todo/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+    <script src="js/vue.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    
+
+    <title>Mis tareas</title>
+</head>
+<body>
+
+
+    <div id="app">
+             <!--  -->
+ <header>
+    
+        <!-- OPCIONES DE FLITRO -->
+
+        <div class="item_task_status" @click="taskFilter('')" :class="{All}">
+            <span class="list-group-item">Todas las tareas: {{cont_to+cont_progress+cont_done}}</span>  
+        </div>
+
+        <div class="item_task_status" @click="taskFilter('Tareas pendientes')" :class="{To_Do}">
+            <span class="list-group-item">Tareas pendientes: {{cont_to}}</span>  
+        </div>
+    
+        <div class="item_task_status" @click="taskFilter('Tareas iniciadas')" :class="{In_Progress}">
+            <span class="list-group-item">Tareas iniciadas: {{cont_progress}}</span>  
+        </div>
+    
+        <div class="item_task_status" @click="taskFilter('Tareas completadas')" :class="{Done}">
+            <span class="list-group-item">Tareas completadas: {{cont_done}}</span>  
+        </div>
+
+            <!--  -->
+ 
+
+ </header>
+    <!--  -->
+            <section>
+
+                <!-- aqui date -->
+                <date v-bind:date_="date_" @printdate="onFullDate" @fecha="filerFech"></date>
+                    <!-- aqui date -->
+
+                <div class="container">
+                
+                    <div class="task_title">TAREA DE HOY</div>
+                    <div class="task_container" id="task_con">
+                        <!--  -->
+            <div v-if="band"><!-- VERFICAR SI EXISTEN TAREAS  -->
+                <todo  v-for="(task, index) in todos" v-bind:todos="task"  v-bind:key="task.id" @edit="editTask"  @remove="removeTask(index)"  ></todo> <!-- TAREAS  -->
+
+            </div>
+
+            <div v-else><!-- CUANDO NO EXISTE TAREAS -->
+            
+            <center> <i class="task_info">Crea tu primera tarea</i></center>
+
+            </div>
+
+                    </div>
+                
+                </div>
+            </section>
+
+        <!--  -->
+
+                <footer>
+                
+                        <!-- BOTÓN PARA AGREGAR MÁS TAREAS -->
+                        <div class="button " @click="modal">
+                        <i class="fas fa-tasks" ></i>
+                        </div>
+                        <!--  -->
+                </footer>
+
+            <!--  -->
+    </div>
+
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
