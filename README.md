@@ -17,13 +17,13 @@ My Tasks nace para ofrecer una aplicación web que nos permita gestionar nuestra
 
 Clonar el repositorio   
     
-    ```
+ ```
     git clone https://github.com/obrian-code/My-Task.git
-    ```
+ ```
 
 ## Muestra   
 
  ```
- 	obrian-code.github.io/My-Task/ 
+    obrian-code.github.io/My-Task/ 
  ```
  
