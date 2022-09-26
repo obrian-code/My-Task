@@ -27,3 +27,24 @@ Clonar el repositorio
     obrian-code.github.io/My-Task/ 
  ```
  
+## Crédito
+Esta aplicación está inspirada en el concepto <a href="https://github.com/brunocout/my-tasks-w-react">my tasks w react</a>  Diseñado por <a href="https://github.com/obrian-code">obrian-code </a>
+
+
+### License
+
+ ```
+Copyright 20202 obrian-code
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+ ```
